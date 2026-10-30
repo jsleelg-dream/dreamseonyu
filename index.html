@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>공유오피스 홈페이지</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#2B2925;text-decoration:none}a:hover{color:#165431}
+.slr{position:absolute;opacity:0;pointer-events:none}
+.sl{position:relative;overflow:hidden;height:300px;background:#D4DDD6}
+.sl .tk{display:flex;width:400%;height:100%;transition:transform .45s ease}
+.sl .sd{position:relative;flex:0 0 25%;width:25%;height:100%}
+.sl .sd img{width:100%;height:100%;object-fit:cover;display:block}
+.sl .ar{position:absolute;top:50%;margin-top:-22px;width:44px;height:44px;border-radius:50%;background:rgba(20,32,29,.65);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.sl .pv{left:12px}.sl .nx{right:12px}
+.sl .ds{position:absolute;bottom:6px;left:0;right:0;display:flex;justify-content:center}
+.sl .ds label{width:26px;height:26px;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.sl .ds label::after{content:"";width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.6)}
+#a2:checked~.tk,#b2:checked~.tk{transform:translateX(-25%)}
+#a3:checked~.tk,#b3:checked~.tk{transform:translateX(-50%)}
+#a4:checked~.tk,#b4:checked~.tk{transform:translateX(-75%)}
+#a1:checked~.ds label[for=a1]::after,#a2:checked~.ds label[for=a2]::after,#a3:checked~.ds label[for=a3]::after,#a4:checked~.ds label[for=a4]::after,#b1:checked~.ds label[for=b1]::after,#b2:checked~.ds label[for=b2]::after,#b3:checked~.ds label[for=b3]::after,#b4:checked~.ds label[for=b4]::after{background:#FFFFFF;width:12px;height:12px}
+.slr:focus-visible~.ds{outline:2px solid #FFFFFF;border-radius:8px}
+</style>
+</helmet>
+<div style="font-family:'LINE Seed Sans KR','Noto Sans KR',sans-serif;color:#2B2925;background:#F3F5F2;line-height:1.6">
+
+<div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;padding:20px 6vw;border-bottom:1px solid #D4DDD6;background:#FFFFFF">
+<a href="#top" style="display:flex;align-items:center;gap:14px"><img src="/_blob/73b03efaf87b2de62eecf64862bf0f54" alt="드림캐쳐스" style="height:44px;display:block"><span style="font-size:14px;font-weight:700;color:#4A4F4A">영등포선유도역점</span></a>
+<div style="display:flex;flex-wrap:wrap;gap:28px;align-items:center;font-size:16px;font-weight:500">
+<a href="#space">공간 소개</a><a href="#contract">계약 안내</a><a href="#contact">상담 문의</a>
+<a href="#contact" style="background:{{accent}};color:#FFFFFF;padding:11px 22px;border-radius:8px;font-weight:700">상담 신청</a>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:48px;align-items:center;max-width:1240px;margin:0 auto;padding:96px 6vw">
+<div>
+<p style="margin:0 0 16px;font-size:15px;font-weight:700;color:{{accent}}">드림캐쳐스 영등포선유도역점</p>
+<h1 style="margin: 0 0 24px; font-size: 52px; line-height: 1.25; font-weight: 900; letter-spacing: -1.5px; color: #2b2925">예쁘고 아늑하게,<br>일에 집중하는 <span style="color:#165431">공간</span></h1>
+<p style="margin: 0 0 36px; font-size: 16px; color: #4A4F4A">상주 사무실 부터, 라운지, 비상주 사무실까지. 필요한 만큼만 골라 쓰세요.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px">
+<a href="#space" style="background:#165431;color:#FFFFFF;padding:15px 28px;border-radius:8px;font-weight:700">공간 둘러보기</a>
+<a href="#contact" style="border:1.5px solid #165431;padding:13.5px 28px;border-radius:8px;font-weight:700">상담 문의하기</a>
+</div>
+</div>
+<img src="/_blob/e11155ceaf55efb557a864d243a9816b" alt="공유오피스 라운지 전경" style="width:100%;height:420px;object-fit:cover;border-radius:16px;display:block">
+</div>
+
+<div id="space" style="background:#FFFFFF;padding:88px 6vw">
+<div style="max-width:1240px;margin:0 auto">
+<p style="margin:0 0 8px;font-size:15px;font-weight:700;color:{{accent}}">01 공간 소개</p>
+<h2 style="margin:0 0 12px;font-size:36px;font-weight:900;letter-spacing:-1px">쓰임에 맞는 공간을 고르세요</h2>
+<p style="margin:0 0 48px;font-size:17px;color:#4A4F4A">함께 쓰는 공용공간과, 나만의 업무공간을 나눠 운영합니다.</p>
+
+<h3 style="margin:0 0 20px;font-size:21px;font-weight:700">공용공간</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-bottom:56px">
+<div style="background:#F3F5F2;border-radius:14px;overflow:hidden">
+<img src="/_blob/502e52831a238f9d339a64ca356c0592" alt="회의실" style="width:100%;height:220px;object-fit:cover;display:block">
+<div style="padding:24px"><h4 style="margin:0 0 8px;font-size:20px;font-weight:700">회의실</h4><p style="margin:0;color:#4A4F4A;font-size:15px">미팅과 발표에 맞는 예약제 공간. <br>[6인실 / 55인치 TV모니터, 화이트보드]</p></div>
+</div>
+<div style="background:#F3F5F2;border-radius:14px;overflow:hidden">
+<img src="/_blob/b9e7c536e9b5aa6aa17e2e7d32298bc4" alt="리차징룸" style="width:100%;height:220px;object-fit:cover;display:block">
+<div style="padding:24px"><h4 style="margin:0 0 8px;font-size:20px;font-weight:700">리차징룸</h4><p style="margin:0;color:#4A4F4A;font-size:15px">잠시 쉬며 재충전하는 조용한 공간. [안마의자설치]</p></div>
+</div>
+<div style="background:#F3F5F2;border-radius:14px;overflow:hidden">
+<img src="/_blob/72eede3d3cbe1923d9a3f99b3fac4610" alt="OA존" style="width:100%;height:220px;object-fit:cover;display:block">
+<div style="padding:24px"><h4 style="margin:0 0 8px;font-size:20px;font-weight:700">OA존</h4><p style="margin:0;color:#4A4F4A;font-size:15px">복합기·OA비품 등 사무기기를 쓰는 공간. [복합기, 사무기기 / 월 흑백100장/컬러10장 무료]</p></div>
+</div>
+<div style="background:#F3F5F2;border-radius:14px;overflow:hidden">
+<img src="/_blob/e8eac21dc800c31cfe22c3ee6483e26e" alt="스피킹룸" style="width:100%;height:220px;object-fit:cover;object-position:center 45%;display:block">
+<div style="padding:24px"><h4 style="margin:0 0 8px;font-size:20px;font-weight:700">스피킹룸</h4><p style="margin:0;color:#4A4F4A;font-size:15px">통화·화상회의를 편하게 할 수 있는 방음 공간.&nbsp;<br><br></p></div>
+</div>
+<div style="background:#F3F5F2;border-radius:14px;overflow:hidden">
+<img src="/_blob/ff97a5d1bdd494c501c642742e88ca3a" alt="캔틴" style="width:100%;height:220px;object-fit:cover;display:block">
+<div style="padding:24px"><h4 style="margin:0 0 8px;font-size:20px;font-weight:700">캔틴</h4><p style="margin:0;color:#4A4F4A;font-size:15px">커피머신·냉장고·정수기를 갖춘 휴게 공간. [이용 안내]</p></div>
+</div>
+<div style="background:#165431;color:#FFFFFF;border-radius:14px;overflow:hidden;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:32px;min-height:340px">
+<svg aria-hidden="true" viewBox="0 0 200 110" style="position:absolute;right:-24px;top:-6px;width:240px;opacity:.16"><polyline points="10,98 56,52 100,96 144,52 190,98" fill="none" stroke="#FFFFFF" stroke-width="24" stroke-linejoin="miter"></polyline><circle cx="56" cy="20" r="13" fill="#FFFFFF"></circle><circle cx="144" cy="20" r="13" fill="#FFFFFF"></circle></svg>
+<div style="position:relative">
+<p style="margin:0 0 12px;font-size:14px;font-weight:700;color:#B9DDC4">Better Space! Better Lifestyle!</p>
+<h4 style="margin:0 0 12px;font-size:30px;line-height:1.3;font-weight:900;letter-spacing:-0.5px">Make your dreams<br>come true.</h4>
+<p style="margin:0;font-size:15px;color:#E3EEE6">휴식이 있는 공유오피스, 꿈을 추구하는 분들과 함께합니다.</p>
+</div>
+</div>
+</div>
+
+<h3 style="margin:0 0 20px;font-size:21px;font-weight:700">업무공간</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px">
+<div style="background:#165431;color:#FFFFFF;border-radius:14px;overflow:hidden">
+<div class="sl">
+<input class="slr" type="radio" name="sa" id="a1" checked="" aria-label="라운지 사진 1"><input class="slr" type="radio" name="sa" id="a2" aria-label="라운지 사진 2"><input class="slr" type="radio" name="sa" id="a3" aria-label="라운지 사진 3"><input class="slr" type="radio" name="sa" id="a4" aria-label="라운지 사진 4">
+<div class="tk">
+<div class="sd"><img src="/_blob/ebeee046398b82ad9909d557cfaa8fc8" alt="라운지 1"><label class="ar pv" for="a4" aria-label="이전 사진"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></label><label class="ar nx" for="a2" aria-label="다음 사진"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></label></div>
+<div class="sd"><img src="/_blob/0d9fc1fb0bbd124961c77ee770f8b0ef" alt="라운지 2"><label class="ar pv" for="a1" aria-label="이전 사진"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></label><label class="ar nx" for="a3" aria-label="다음 사진"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></label></div>
+<div class="sd"><img src="/_blob/54a31384e46e27c2a55a37b67b44508f" alt="라운지 3"><label class="ar pv" for="a2" aria-label="이전 사진"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></label><label class="ar nx" for="a4" aria-label="다음 사진"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></label></div>
+<div class="sd"><img src="/_blob/cb0f5831f2ea5e3c5a689dcfef0fb471" alt="라운지 4"><label class="ar pv" for="a3" aria-label="이전 사진"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></label><label class="ar nx" for="a1" aria-label="다음 사진"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></label></div>
+</div>
+<div class="ds"><label for="a1" aria-label="사진 1"></label><label for="a2" aria-label="사진 2"></label><label for="a3" aria-label="사진 3"></label><label for="a4" aria-label="사진 4"></label></div>
+</div>
+<div style="padding:36px">
+<h4 style="margin:0 0 12px;font-size:26px;font-weight:700">라운지</h4>
+<p style="margin:0 0 20px;color:#E3EEE6;font-size:16px">자유롭게 앉아 일하는 열린 공간. 원하는 자리에서 가볍게 시작할 수 있습니다.</p>
+<div style="display:flex;flex-wrap:wrap;gap:10px;font-size:14px"><span style="border: 1px solid rgb(111, 140, 132); padding: 6px 14px; border-radius: 99px">자유석</span><span style="border: 1px solid rgb(111, 140, 132); padding: 6px 14px; border-radius: 99px">[고정석2석, 창가석3석, 쇼파석1석, 테이블석6석]</span><span style="border: 1px solid rgb(111, 140, 132); padding: 6px 14px; border-radius: 99px">[이용 시간]</span></div>
+</div>
+</div>
+<div style="background:#165431;color:#FFFFFF;border-radius:14px;overflow:hidden">
+<div class="sl">
+<input class="slr" type="radio" name="sb" id="b1" checked="" aria-label="상주사무실 사진 1"><input class="slr" type="radio" name="sb" id="b2" aria-label="상주사무실 사진 2"><input class="slr" type="radio" name="sb" id="b3" aria-label="상주사무실 사진 3"><input class="slr" type="radio" name="sb" id="b4" aria-label="상주사무실 사진 4">
+<div class="tk">
+<div class="sd"><img src="/_blob/8cadc9df3a70e1a18d68261d48173c20" alt="상주사무실 1"><label class="ar pv" for="b4" aria-label="이전 사진"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></label><label class="ar nx" for="b2" aria-label="다음 사진"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></label></div>
+<div class="sd"><img src="/_blob/7276653c4114158f06ad0b78b3f58aed" alt="상주사무실 2"><label class="ar pv" for="b1" aria-label="이전 사진"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></label><label class="ar nx" for="b3" aria-label="다음 사진"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></label></div>
+<div class="sd"><img src="/_blob/7185a1fbf78cf4050567a41ba326b380" alt="상주사무실 3"><label class="ar pv" for="b2" aria-label="이전 사진"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></label><label class="ar nx" for="b4" aria-label="다음 사진"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></label></div>
+<div class="sd"><img src="/_blob/10797a478e02fcb75bbe170bc43c0669" alt="상주사무실 4"><label class="ar pv" for="b3" aria-label="이전 사진"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></label><label class="ar nx" for="b1" aria-label="다음 사진"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></label></div>
+</div>
+<div class="ds"><label for="b1" aria-label="사진 1"></label><label for="b2" aria-label="사진 2"></label><label for="b3" aria-label="사진 3"></label><label for="b4" aria-label="사진 4"></label></div>
+</div>
+<div style="padding:36px">
+<h4 style="margin:0 0 12px;font-size:26px;font-weight:700">상주사무실</h4>
+<p style="margin:0 0 20px;color:#E3EEE6;font-size:16px">우리 팀만의 독립된 사무실. 전용 공간에서 안정적으로 일할 수 있습니다.</p>
+<div style="display:flex;flex-wrap:wrap;gap:10px;font-size:14px">
+<span style="border:1px solid rgba(255,255,255,.5);padding:6px 14px;border-radius:99px">[호실 수 / 면적]</span>
+<span style="border:1px solid rgba(255,255,255,.5);padding:6px 14px;border-radius:99px">[수용 인원]</span>
+<span style="border:1px solid rgba(255,255,255,.5);padding:6px 14px;border-radius:99px">[포함 시설]</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="contract" style="padding:88px 6vw">
+<div style="max-width:1240px;margin:0 auto">
+<p style="margin:0 0 8px;font-size:15px;font-weight:700;color:{{accent}}">02 계약 안내</p>
+<h2 style="margin:0 0 12px;font-size:36px;font-weight:900;letter-spacing:-1px">이용 형태에 따라 계약이 달라요</h2>
+<p style="margin:0 0 48px;font-size:17px;color:#4A4F4A">상주사무실은 별도 계약, 라운지 자유석과 비상주사무실은 간편 계약으로 진행합니다.</p>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-bottom:56px">
+<div style="background:#FFFFFF;border:1px solid #D4DDD6;border-radius:14px;padding:36px">
+<p style="margin:0 0 8px;font-size:14px;font-weight:700;color:{{accent}}">간편 계약</p>
+<h3 style="margin:0 0 12px;font-size:24px;font-weight:700">상주사무실</h3>
+<p style="margin:0 0 20px;color:#4A4F4A;font-size:15px">호실 별 조건이 달라 상담 후 계약 진행합니다.</p>
+<p style="margin:0 0 20px;font-size:28px;font-weight:900">[월 이용료]<span style="font-size:15px;font-weight:400;color:#4A4F4A"> / 호실별 상이</span></p>
+<p style="margin:0;font-size:15px;color:#4A4F4A">계약 기간 [기간] · 보증금 [금액] · 관리비 [무료]</p>
+</div>
+<div style="background:#FFFFFF;border:1px solid #D4DDD6;border-radius:14px;padding:36px">
+<p style="margin:0 0 8px;font-size:14px;font-weight:700;color:{{accent}}">간편 계약</p>
+<h3 style="margin:0 0 12px;font-size:24px;font-weight:700">라운지 자유석 · 비상주사무실</h3>
+<p style="margin:0 0 20px;color:#4A4F4A;font-size:15px">표준 계약서로 빠르게 시작할 수 있습니다.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px">
+<div><p style="margin:0;font-size:14px;color:#4A4F4A">라운지 자유석</p><p style="margin:0;font-size:24px;font-weight:900">[월 이용료]</p></div>
+<div><p style="margin:0;font-size:14px;color:#4A4F4A">비상주사무실</p><p style="margin:0;font-size:24px;font-weight:900">[월 이용료]</p></div>
+</div>
+<p style="margin:0;font-size:15px;color:#4A4F4A">계약 기간 [기간] · 사업자 주소 등록 [가능 여부]</p>
+</div>
+</div>
+
+<h3 style="margin:0 0 20px;font-size:21px;font-weight:700">계약 진행 순서</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px">
+<div style="border-top:3px solid {{accent}};padding-top:16px"><p style="margin:0;font-weight:900;font-size:22px">01</p><p style="margin:4px 0 0;font-weight:700">상담 문의</p><p style="margin:0;font-size:14px;color:#4A4F4A">전화 또는 온라인 문의</p></div>
+<div style="border-top:3px solid {{accent}};padding-top:16px"><p style="margin:0;font-weight:900;font-size:22px">02</p><p style="margin:4px 0 0;font-weight:700">공간 방문</p><p style="margin:0;font-size:14px;color:#4A4F4A">현장 확인 및 안내</p></div>
+<div style="border-top:3px solid {{accent}};padding-top:16px"><p style="margin:0;font-weight:900;font-size:22px">03</p><p style="margin:4px 0 0;font-weight:700">계약 체결</p><p style="margin:0;font-size:14px;color:#4A4F4A">유형별 계약서 작성</p></div>
+<div style="border-top:3px solid {{accent}};padding-top:16px"><p style="margin:0;font-weight:900;font-size:22px">04</p><p style="margin:4px 0 0;font-weight:700">이용 시작</p><p style="margin:0;font-size:14px;color:#4A4F4A">출입 등록 후 바로 이용</p></div>
+</div>
+</div>
+</div>
+
+<div id="contact" style="background:#165431;color:#FFFFFF;padding:88px 6vw">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:56px;max-width:1240px;margin:0 auto">
+<div>
+<img src="/_blob/cc441ee57697f13dc02e417c5d6d1001" alt="드림캐쳐스" style="height:48px;display:block;margin-bottom:40px">
+<p style="margin:0 0 8px;font-size:15px;font-weight:700;color:#B9DDC4">03 상담 문의</p>
+<h2 style="margin:0 0 16px;font-size:36px;font-weight:900;letter-spacing:-1px">편하게 문의해 주세요</h2>
+<p style="margin:0 0 36px;font-size:17px;color:#E3EEE6">원하는 공간과 연락처를 남겨주시면 확인 후 연락드립니다.</p>
+<p style="margin:0 0 4px;font-size:14px;color:#B9DDC4">전화</p><p style="margin:0 0 20px;font-size:18px;font-weight:700">[전화번호]</p>
+<p style="margin:0 0 4px;font-size:14px;color:#B9DDC4">운영 시간</p><p style="margin:0 0 20px;font-size:18px;font-weight:700">[운영 시간]</p>
+<p style="margin:0 0 4px;font-size:14px;color:#B9DDC4">주소</p><p style="margin:0 0 20px;font-size:18px;font-weight:700">[주소]</p>
+<p style="margin:0 0 4px;font-size:14px;color:#B9DDC4">블로그</p><p style="margin:0;font-size:18px;font-weight:700"><a href="https://blog.naver.com/seonyu110" target="_blank" rel="noopener" style="color:#FFFFFF;text-decoration:underline;text-underline-offset:4px">blog.naver.com/seonyu110</a></p>
+</div>
+<div style="background:#FFFFFF;color:#2B2925;border-radius:14px;padding:36px;display:flex;flex-direction:column;gap:18px">
+<label style="display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:700">이름<input type="text" placeholder="홍길동" style="padding:13px 14px;border:1px solid #8A978D;border-radius:8px;font-size:16px;font-family:inherit"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:700">연락처<input type="tel" placeholder="010-0000-0000" style="padding:13px 14px;border:1px solid #8A978D;border-radius:8px;font-size:16px;font-family:inherit"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:700">관심 공간<select style="padding:13px 14px;border:1px solid #8A978D;border-radius:8px;font-size:16px;font-family:inherit;background:#FFFFFF"><option>상주사무실</option><option>비상주사무실</option><option>라운지 자유석</option><option>회의실 예약</option></select></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:700">문의 내용<textarea rows="4" placeholder="인원, 희망 시작일 등을 알려주세요" style="padding:13px 14px;border:1px solid #8A978D;border-radius:8px;font-size:16px;font-family:inherit;resize:vertical"></textarea></label>
+<button type="button" style="background:{{accent}};color:#FFFFFF;border:0;padding:16px;border-radius:8px;font-size:17px;font-weight:700;font-family:inherit;cursor:pointer">상담 신청하기</button>
+</div>
+</div>
+</div>
+
+<div style="padding:36px 6vw;display:flex;flex-direction:column;align-items:center;gap:14px;font-size:14px;color:#4A4F4A;text-align:center;background:#FFFFFF"><img src="/_blob/73b03efaf87b2de62eecf64862bf0f54" alt="드림캐쳐스" style="height:40px;display:block"><span>드림캐쳐스 영등포선유도역점 · [사업자 정보] · [주소] · [전화번호]</span></div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#165431"},"$preview":{"width":1360,"height":2700}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#165431' };
+}
+}
+</script>
+</body>
+</html>
